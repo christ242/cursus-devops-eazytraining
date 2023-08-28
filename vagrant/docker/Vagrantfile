@@ -4,6 +4,7 @@
 #   + On windows => $env:ENABLE_ZSH="true"
 #   + On Linux  => export ENABLE_ZSH="true"
 # force virtualbox provider
+VBoxManage dhcpserver remove --netname HostInterfaceNetworking-vboxnet0
 ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
 
 Vagrant.configure('2') do |config|
